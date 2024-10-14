@@ -3,7 +3,7 @@
   "title": "Linked API",
   "type": "object",
   "properties": {
-    "dsisplayName": {
+    "displayName": {
       "description": "Please enter a friendly display name for this API.",
       "type": "string",
       "maxLength": 100,
@@ -15,20 +15,20 @@
       "maxLength": 40
     },
     "autoPublish": {
-      "description": "If this value is set to true, this api will make an attempt to publish. Otherwise it will be created as a draft only",
+      "description": "If this value is set to true, this API will be published immediately. Otherwise it will be created as a draft only",
       "type": "boolean"
     },
     "overview": {
-      "description": "This will be visible to users from conumption portal.It is required in order to publish",
+      "description": "This will be visible to API consumers",
       "type": "string"
     },
     "schemaUrl": {
-      "description": "Link to the destination of the schema of this API.It is required in order to publish",
+      "description": "Link to the destination of the schema of this API",
       "type": "string",
       "format": "uri"
     },
     "schemaType": {
-      "description": "Specify the schema type. It is required in order to publish",
+      "description": "Specify the schema type",
       "type": "string",
       "enum": [
         "openapi",
@@ -53,12 +53,12 @@
       "minLength": 1
     },
     "visibility": {
-      "description": "Allowed values are 'Public', 'DfE Internal', 'Private'",
+      "description": "Allowed values are 'Public', 'Internal', 'Private'",
       "type": "string",
       "enum": [
-        "public",
-        "internal",
-        "private"
+        "Public",
+        "Internal",
+        "Private"
       ]
     },
     "tags": {
@@ -70,12 +70,13 @@
       "description": "Data exposure classification",
       "type": "string",
       "enum": [
-        "public",
-        "government",
-        "department"
+        "Public facing",
+        "Across government services",
+        "Across departmental services",
+        "Within service boundary"
       ]
     },
-    "ServiceLevel": {
+    "serviceLevel": {
       "type": "string"
     },
     "technology": {
@@ -105,10 +106,13 @@
             "format": "uri"
           },
           "visibility": {
+            "description": "These options are limited to the maximum visibility of the API",
             "type": "string",
             "enum": [
-              "inherit",
-              "private"
+              "Inherit",
+              "Private",
+              "Public",
+              "Internal"
             ]
           }
         }
@@ -125,7 +129,7 @@
           },
           "name": {
             "type": "string",
-            "description": "The name of the release.Usually this will be a release version"
+            "description": "The name of the release."
           },
           "tag": {
             "type": "string",

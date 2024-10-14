@@ -1,8 +1,8 @@
 {
     "displayName": "Linked API example publish",
-    "desciption": "This is an example of a valid schema of a linked API that will be set to auto punlish",
+    "description": "This is an example of a valid schema of a linked API that will be set to auto publish",
     "autoPublish": false,
-    "overview": "This message will be preseneted to the users in the FaUAPI consumption portal",
+    "overview": "This message will be presented to the users in the FaUAPI consumption portal",
     "backendType": "http",
     "majorVersion": "v1.0",
     "visibility": "Internal",
@@ -11,7 +11,7 @@
     "serviceLevel": "24/7",
     "technology": "REST, C#",
     "usage": "Government parties can use it",
-    "environtments": [
+    "environments": [
         {
             "name": "dev",
             "baseUrl" : "https://valid-base-url.co.uk",
