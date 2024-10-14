@@ -1,0 +1,235 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Linked API",
+  "type": "object",
+  "properties": {
+    "dsisplayName": {
+      "description": "Please enter a friendly display name for this API.",
+      "type": "string",
+      "maxLength": 100,
+      "minLength": 3
+    },
+    "description": {
+      "description": "Please enter a brief description of the purpose of this API.This information will be searchable by API consumers and presented as part of search results",
+      "type": "string",
+      "maxLength": 40
+    },
+    "autoPublish": {
+      "description": "If this value is set to true, this api will make an attempt to publish. Otherwise it will be created as a draft only",
+      "type": "boolean"
+    },
+    "overview": {
+      "description": "This will be visible to users from conumption portal.It is required in order to publish",
+      "type": "string"
+    },
+    "schemaUrl": {
+      "description": "Link to the destination of the schema of this API.It is required in order to publish",
+      "type": "string",
+      "format": "uri"
+    },
+    "schemaType": {
+      "description": "Specify the schema type. It is required in order to publish",
+      "type": "string",
+      "enum": [
+        "openapi",
+        "openapi+json",
+        "wsdl",
+        "swagger"
+      ]
+    },
+    "backendType": {
+      "description": "allowed values - http, soap, graphql",
+      "type": "string",
+      "enum": [
+        "http",
+        "soap",
+        "graphql"
+      ]
+    },
+    "majorVersion": {
+      "description": "Please enter the major version identifier for this API",
+      "type": "string",
+      "maxLength": 50,
+      "minLength": 1
+    },
+    "visibility": {
+      "description": "Allowed values are 'Public', 'DfE Internal', 'Private'",
+      "type": "string",
+      "enum": [
+        "public",
+        "internal",
+        "private"
+      ]
+    },
+    "tags": {
+      "description": "Semi-colon delimited set of tags for search",
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9]+(;[a-zA-Z0-9]+)*$"
+    },
+    "classification": {
+      "description": "Data exposure classification",
+      "type": "string",
+      "enum": [
+        "public",
+        "government",
+        "department"
+      ]
+    },
+    "ServiceLevel": {
+      "type": "string"
+    },
+    "technology": {
+      "type": "string"
+    },
+    "usage": {
+      "description": "Describe who can use this API",
+      "type": "string"
+    },
+    "environments": {
+      "description": "an array of environments",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "only the names 'live', 'staging, and 'dev are allowed'",
+            "enum": [
+              "live",
+              "staging",
+              "dev"
+            ]
+          },
+          "baseUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "visibility": {
+            "type": "string",
+            "enum": [
+              "inherit",
+              "private"
+            ]
+          }
+        }
+      },
+      "maxItems": 3
+    },
+    "releases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "isCurrent": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the release.Usually this will be a release version"
+          },
+          "tag": {
+            "type": "string",
+            "enum": [
+              "Live",
+              "Alpha",
+              "Beta",
+              "Planned",
+              "Deprecated"
+            ]
+          },
+          "availableFrom": {
+            "type": "string",
+            "format": "date"
+          },
+          "availableTo": {
+            "type": "string",
+            "format": "date"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "isCurrent",
+          "name",
+          "tag"
+        ],
+        "if": {
+          "properties": {
+            "isCurrent": {
+              "const": true
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "availableFrom"
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "displayName",
+    "description",
+    "backendType",
+    "majorVersion",
+    "autoPublish"
+  ],
+  "if": {
+    "properties": {
+      "autoPublish": {
+        "const": true
+      }
+    }
+  },
+  "then": {
+    "properties": {
+      "contacts": {
+        "type": "array",
+        "minItems": 1
+      },
+      "required": [
+        "overview",
+        "schemaUrl",
+        "schemaType",
+        "classification",
+        "visibility"
+      ]
+    },
+    "allOf": [
+      {
+        "properties": {
+          "releases": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "IsCurrent": {
+                  "const": true
+                }
+              }
+            },
+            "maxItems": 1
+          }
+        }
+      },
+      {
+        "properties": {
+          "environments": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

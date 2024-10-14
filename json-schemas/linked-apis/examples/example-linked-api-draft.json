@@ -1,0 +1,8 @@
+{
+    "displayName": "Linked API example publish",
+    "desciption": "This is an example of a valid schema of a linked API that will be set to auto punlish",
+    "autoPublish": false,
+    "backendType": "http",
+    "majorVersion": "v1.0",
+    "environtments": []
+}
