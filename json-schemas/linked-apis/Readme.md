@@ -1,6 +1,5 @@
 1. **Draft Linked API** \
-    [Example](/json-schemas/linked-apis/examples/example-linked-api-draft.json) \
-
+    [Example](/json-schemas/linked-apis/examples/example-linked-api-draft.json)
     -  `autoPublish` - Set this value to `false`. 
     -  `displayName` - This value must be between 3 and 100 characters.
     -  `description` - This value must not exceed 40 characters.
