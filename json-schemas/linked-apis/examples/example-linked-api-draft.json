@@ -1,7 +1,7 @@
 {
-    "displayName": "Linked API example publish false",
-    "description": "This is not an example of a valid schema of a linked API that will be set to auto publish = false",
-    "autoPublish": false,
+    "displayName": "Linked API example publish true",
+    "description": "This is not an example of a valid schema of a linked API that will be set to auto publish = true",
+    "autoPublish": true,
     "backendType": "https",
     "majorVersion": "",
     "environments": []
