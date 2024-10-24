@@ -19,7 +19,7 @@
             "visibility" : "Inherit"
         },
         {
-            "name": "dev",
+            "name": "staging",
             "baseUrl" : "https://valid-base-url.co.uk",
             "visibility" : "Inherit"
         }
