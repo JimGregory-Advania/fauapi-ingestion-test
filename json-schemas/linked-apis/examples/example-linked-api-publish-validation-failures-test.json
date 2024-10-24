@@ -22,6 +22,11 @@
             "name": "staging",
             "baseUrl" : "https://valid-base-url.co.uk",
             "visibility" : "Inherit"
+        },
+        {
+            "name": "live",
+            "baseUrl" : "https://valid-base-url.co.uk",
+            "visibility" : "private"
         }
     ],
     "releases" : [
