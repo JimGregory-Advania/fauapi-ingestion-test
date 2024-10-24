@@ -1,0 +1,43 @@
+{
+    "displayName": "Linked API example publish validation failures test",
+    "description": "This is an example of a invalid schema of a linked API that will be set to auto publish",
+    "overview": "This message will be presented to the users in the FaUAPI consumption portal",
+    "schemaUrl": "https://valid-uri-to-schema.co.uk",
+    "schemaType": "openapi+json",
+    "backendType": "http",
+    "majorVersion": "v1.0",
+    "visibility": "Internal",
+    "tags": "",
+    "classification": "government",
+    "serviceLevel": "24/7",
+    "technology": "REST, C#",
+    "usage": "Government parties can use it",
+    "environments": [
+        {
+            "name": "dev",
+            "baseUrl" : "https://valid-base-url.co.uk",
+            "visibility" : "inherit"
+        },
+        {
+            "name": "dev",
+            "baseUrl" : "https://valid-base-url.co.uk",
+            "visibility" : "inherit"
+        }
+    ],
+    "releases" : [
+        {
+           "isCurrent" : true,
+           "name": "1.0",
+           "tag": "Live",
+           "availableFrom": "2024-10-01",
+           "notes": "Current release of this api." 
+        },
+        {
+            "isCurrent" : true,
+            "name": "1.0",
+            "tag": "Live",
+            "notes": "Current release of this api." 
+         }
+    ]
+
+}
