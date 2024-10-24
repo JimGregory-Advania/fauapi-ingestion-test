@@ -12,7 +12,7 @@
     "description": {
       "description": "Please enter a brief description of the purpose of this API.This information will be searchable by API consumers and presented as part of search results",
       "type": "string",
-      "maxLength": 40
+      "minLength": 40
     },
     "overview": {
       "description": "This will be visible to API consumers",
