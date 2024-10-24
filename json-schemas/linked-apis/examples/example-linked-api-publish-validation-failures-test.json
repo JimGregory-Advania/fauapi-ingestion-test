@@ -31,13 +31,6 @@
     ],
     "releases" : [
         {
-           "isCurrent" : false,
-           "name": "1.0",
-           "tag": "Live",
-           "availableFrom": "2024-10-01",
-           "notes": "Current release of this api." 
-        },
-        {
             "isCurrent" : true,
             "name": "1.0",
             "tag": "Live",
