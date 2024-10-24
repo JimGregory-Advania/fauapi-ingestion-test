@@ -31,11 +31,19 @@
     ],
     "releases" : [
         {
-            "isCurrent" : true,
+            "isCurrent" : false,
             "name": "1.0",
-            "tag": "Live",
-            "notes": "Current release of this api." 
-         }
+            "tag": "Deprecated",
+            "availableFrom": "2024-10-01",
+            "notes": "Current release of this api. (Deprecated)" 
+         },
+         {
+             "isCurrent" : true,
+             "name": "1.0",
+             "tag": "Live",
+             "availableFrom": "2024-10-24",
+             "notes": "Current release of this api." 
+          }
     ]
 
 }
