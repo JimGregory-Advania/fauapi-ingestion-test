@@ -3,7 +3,7 @@
     "description": "This is an example of a valid schema of a linked API that will be set to auto publish",
     "overview": "This message will be presented to the users in the FaUAPI consumption portal",
     "backendType": "http",
-    "majorVersion": "v1.0",
+    "majorVersion": "v1",
     "visibility": "Internal",
     "tags": "example;publish;api;",
     "classification": "Across government services",
