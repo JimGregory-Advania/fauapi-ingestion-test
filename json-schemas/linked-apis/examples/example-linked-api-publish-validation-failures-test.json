@@ -26,7 +26,7 @@
     ],
     "releases" : [
         {
-           "isCurrent" : true,
+           "isCurrent" : false,
            "name": "1.0",
            "tag": "Live",
            "availableFrom": "2024-10-01",
