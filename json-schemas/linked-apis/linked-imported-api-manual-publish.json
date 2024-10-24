@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Linked API",
+  "title": "Auto-publish imported linked API",
   "type": "object",
   "properties": {
     "displayName": {
@@ -13,10 +13,6 @@
       "description": "Please enter a brief description of the purpose of this API.This information will be searchable by API consumers and presented as part of search results",
       "type": "string",
       "maxLength": 40
-    },
-    "autoPublish": {
-      "description": "If this value is set to true, this API will be published immediately. Otherwise it will be created as a draft only",
-      "type": "boolean"
     },
     "overview": {
       "description": "This will be visible to API consumers",
@@ -177,30 +173,8 @@
     "displayName",
     "description",
     "backendType",
-    "majorVersion",
-    "autoPublish"
+    "majorVersion"
   ],
-  "if": {
-    "properties": {
-      "autoPublish": {
-        "const": true
-      }
-    }
-  },
-  "then": {
-    "properties": {
-      "contacts": {
-        "type": "array",
-        "minItems": 1
-      },
-      "required": [
-        "overview",
-        "schemaUrl",
-        "schemaType",
-        "classification",
-        "visibility"
-      ]
-    },
     "allOf": [
       {
         "properties": {
@@ -235,5 +209,4 @@
         }
       }
     ]
-  }
 }

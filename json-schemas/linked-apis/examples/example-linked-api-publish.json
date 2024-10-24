@@ -1,7 +1,6 @@
 {
     "displayName": "Linked API example publish",
     "description": "This is an example of a valid schema of a linked API that will be set to auto publish",
-    "autoPublish": true,
     "overview": "This message will be presented to the users in the FaUAPI consumption portal",
     "schemaUrl": "https://valid-uri-to-schema.co.uk",
     "schemaType": "openapi+json",
