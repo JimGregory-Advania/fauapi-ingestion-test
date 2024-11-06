@@ -31,14 +31,14 @@
     ],
     "releases" : [
         {
-           "isCurrent" : false,
+           "isCurrent" : true,
            "name": "1",
            "tag": "Deprecated",
            "availableFrom": "2024-10-01",
            "notes": "Current release of this api. (Deprecated)" 
         },
         {
-            "isCurrent" : false,
+            "isCurrent" : true,
             "name": "1",
             "tag": "Live",
             "availableFrom": "2024-10-24",
