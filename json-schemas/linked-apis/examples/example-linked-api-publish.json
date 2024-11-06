@@ -31,7 +31,7 @@
     ],
     "releases" : [
         {
-           "isCurrent" : true,
+           "isCurrent" : false,
            "name": "1",
            "tag": "Deprecated",
            "availableFrom": "2024-10-01",
@@ -39,7 +39,7 @@
         },
         {
             "isCurrent" : true,
-            "name": "1",
+            "name": "2",
             "tag": "Live",
             "availableFrom": "2024-10-24",
             "notes": "Current release of this api." 
