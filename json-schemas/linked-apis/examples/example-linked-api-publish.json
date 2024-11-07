@@ -10,7 +10,7 @@
     "tags": "example;publish;api;",
     "classification": "Across government services",
     "serviceLevel": "24/7",
-    "technology": "REST, C#",
+    "technology": "REST, C#, Testing",
     "usage": "Government parties can use it",
     "environments": [
         {
@@ -32,14 +32,14 @@
     "releases" : [
         {
            "isCurrent" : false,
-           "name": "1",
+           "name": "2",
            "tag": "Deprecated",
            "availableFrom": "2024-10-01",
            "notes": "Current release of this api. (Deprecated)" 
         },
         {
             "isCurrent" : true,
-            "name": "2",
+            "name": "3",
             "tag": "Live",
             "availableFrom": "2024-10-24",
             "notes": "Current release of this api." 
