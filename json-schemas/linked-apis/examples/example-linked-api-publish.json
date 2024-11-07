@@ -1,16 +1,16 @@
 {
     "displayName": "Linked API example publish",
-    "description": "",
+    "description": "This is an example of a valid schema of a linked API that will be set to auto publish",
     "overview": "This message will be presented to the users in the FaUAPI consumption portal",
     "schemaUrl": "https://valid-uri-to-schema.co.uk",
     "schemaType": "openapi+json",
     "backendType": "http",
-    "majorVersion": "1",
+    "majorVersion": "v1",
     "visibility": "Internal",
-    "tags": "example;publish;api;test;",
+    "tags": "example;publish;api;",
     "classification": "Across government services",
     "serviceLevel": "24/7",
-    "technology": "REST, C#, Testing",
+    "technology": "REST, C#",
     "usage": "Government parties can use it",
     "environments": [
         {
@@ -32,14 +32,14 @@
     "releases" : [
         {
            "isCurrent" : false,
-           "name": "2",
+           "name": "1.0",
            "tag": "Deprecated",
            "availableFrom": "2024-10-01",
            "notes": "Current release of this api. (Deprecated)" 
         },
         {
             "isCurrent" : true,
-            "name": "3",
+            "name": "1.0",
             "tag": "Live",
             "availableFrom": "2024-10-24",
             "notes": "Current release of this api." 
