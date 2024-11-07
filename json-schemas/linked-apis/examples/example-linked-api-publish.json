@@ -15,18 +15,18 @@
     "environments": [
         {
             "name": "dev",
-            "baseUrl" : "https://valid-base-url.co.uk",
-            "visibility" : "Inherit"
+            "baseUrl" : "https://valid-base-url2.co.uk",
+            "visibility" : "DfE Internal"
         },
         {
             "name": "staging",
-            "baseUrl" : "https://valid-base-url.co.uk",
+            "baseUrl" : "https://valid-base-url1.co.uk",
             "visibility" : "Inherit"
         },
         {
             "name": "live",
-            "baseUrl" : "https://valid-base-url.co.uk",
-            "visibility" : "Private"
+            "baseUrl" : "https://valid-base-url5.co.uk",
+            "visibility" : "Inherit"
         }
     ],
     "releases" : [
