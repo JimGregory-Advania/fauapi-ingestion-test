@@ -12,7 +12,7 @@
     All of the above are required in this section. The following are also needed:
     -  `overview`: A friendly message that will be presented to the users in the Consumption portal.
     -  `classification` - allowed values -  `Public facing`, `Across government services`, `Across departmental services`, `Within service boundary`.
-    -  `visibility` - Allowed values are `Public`, `DfE Internal`, `Private`.
+    -  `visibility` - Allowed values are `Public`, `Internal`, `Private`.
     -  `tags` - words that are separated by semi-colon. They are used to utilize the search of APIs in FaUAPI.
     -  `serviceLevel` - The level of service can be specified here as a short description.
     -  `technology` - what technology is used for the development of the API.

@@ -16,7 +16,7 @@
         {
             "name": "dev",
             "baseUrl" : "https://valid-base-url2.co.uk",
-            "visibility" : "DfE Internal"
+            "visibility" : "Internal"
         },
         {
             "name": "staging",
