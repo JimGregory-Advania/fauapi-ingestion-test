@@ -1,7 +1,7 @@
 {
     "displayName": "Linked API example publish",
     "description": "This is an example of a valid schema of a linked API that will be set to auto publish",
-    "overview": "This message will be presented to the users in the FaUAPI consumption portal",
+    "overview": "",
     "schemaUrl": "https://valid-uri-to-schema.co.uk",
     "schemaType": "openapi+json",
     "backendType": "http",
@@ -22,16 +22,11 @@
             "name": "staging",
             "baseUrl" : "https://valid-base-url.co.uk",
             "visibility" : "Inherit"
-        },
-        {
-            "name": "live",
-            "baseUrl" : "https://valid-base-url.co.uk",
-            "visibility" : "Private"
         }
     ],
     "releases" : [
         {
-           "isCurrent" : false,
+           "isCurrent" : true,
            "name": "2",
            "tag": "Deprecated",
            "availableFrom": "2024-10-01",
