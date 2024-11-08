@@ -25,4 +25,5 @@
    - `autoPublish` - for this scenario the is set to `true`. This will require more properties to be added to validate the specification.
    - `schemaURL` - A valid url of where the schema of the api is located.
    - `schemaType` - The type of the schema. Valid values are `openapi`,`openapi+json`,`wsdl`,`swagger`.
-   - `releases` - At least one release is required. `IsCurrent` flag must be set to `true`. Otherwise the specification will not validate.
+   - `releases` - At least one release is required. `IsCurrent` flag must be set to `true`. Otherwise the specification will not validate. The tag must
+   be on of the following : `Planned` , `Alpha` , `Beta` , `Live` , `Deprecated` .
