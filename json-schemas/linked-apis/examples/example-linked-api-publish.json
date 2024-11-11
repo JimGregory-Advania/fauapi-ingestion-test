@@ -40,10 +40,11 @@
             "isCurrent" : true,
             "name": "1.0",
             "tag": "Live",
+            "availableFrom": "2024-11-08",
             "notes": "Current release of this api." 
          },
          {
-            "isCurrent" : false,
+            "isCurrent" : true,
             "name": "1.0",
             "tag": "Planned",
             "availableFrom": "2024-11-08",
