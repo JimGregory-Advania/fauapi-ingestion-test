@@ -3,7 +3,7 @@
     "description": "This is an example of a valid schema of a linked API that will be set to auto publish",
     "overview": "This message will be presented to the users in the FaUAPI consumption portal",
     "schemaUrl": "https://raw.githubusercontent.com/JimGregory-Advania/fauapi-ingestion-test/refs/heads/main/json-schemas/linked-apis/exampleSchemas/linked-schema-simple.json",
-    "schemaType": "openapi+json",
+    "schemaType": "openapi",
     "backendType": "http",
     "majorVersion": "v1",
     "visibility": "Internal",
