@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Linked api test schema",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "https://linked-test.platform.education.gov.uk/v1"
+    }
+  ],
+  "paths": {
+    "/api/linked-test": {
+      "post": {
+        "tags": [
+          "linked_test"
+        ],
+        "summary": "Run",
+        "operationId": "Run",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKeyHeader": {
+        "type": "apiKey",
+        "name": "Ocp-Apim-Subscription-Key",
+        "in": "header"
+      },
+      "apiKeyQuery": {
+        "type": "apiKey",
+        "name": "subscription-key",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": [ ]
+    },
+    {
+      "apiKeyQuery": [ ]
+    }
+  ]
+}
