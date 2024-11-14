@@ -13,7 +13,21 @@
     "/api/linked-test": {
       "post": {
         "tags": [
-          "linked_test"
+          "linked_test_post"
+        ],
+        "summary": "Run",
+        "operationId": "Run",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/linked-test-get": {
+      "get": {
+        "tags": [
+          "linked_test_get"
         ],
         "summary": "Run",
         "operationId": "Run",
