@@ -29,8 +29,8 @@
         "tags": [
           "linked_test_get"
         ],
-        "summary": "Run",
-        "operationId": "Run",
+        "summary": "Dog",
+        "operationId": "Dog",
         "responses": {
           "200": {
             "description": "Success"
