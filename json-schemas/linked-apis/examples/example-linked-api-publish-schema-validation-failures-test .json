@@ -1,13 +1,13 @@
 {
-    "displayName": "Linked API example publish validation failures test",
-    "description": "This is an example of a invalid schema of a linked API that will be set to auto publish",
+    "displayName": "Linked API example publish schema validation failure",
+    "description": "This is an example of a valid schema of a linked API that will be set to auto publish",
     "overview": "This message will be presented to the users in the FaUAPI consumption portal",
-    "schemaUrl": "https://valid-uri-to-schema.co.uk",
-    "schemaType": "openapi+json",
+    "schemaUrl": "https://raw.githubusercontent.com/JimGregory-Advania/fauapi-ingestion-test/refs/heads/main/json-schemas/linked-apis/exampleSchemas/linked-schema-simple-invalid.json",
+    "schemaType": "openapi",
     "backendType": "http",
-    "majorVersion": "v1.0",
+    "majorVersion": "v1",
     "visibility": "Internal",
-    "tags": "",
+    "tags": "example;publish;api;",
     "classification": "Across government services",
     "serviceLevel": "24/7",
     "technology": "REST, C#",
@@ -15,35 +15,41 @@
     "environments": [
         {
             "name": "dev",
-            "baseUrl" : "https://valid-base-url.co.uk",
-            "visibility" : "Inherit"
+            "baseUrl" : "https://valid-base-url2.co.uk",
+            "visibility" : "Internal"
         },
         {
             "name": "staging",
-            "baseUrl" : "https://valid-base-url.co.uk",
+            "baseUrl" : "https://valid-base-url1.co.uk",
             "visibility" : "Inherit"
         },
         {
             "name": "live",
-            "baseUrl" : "https://valid-base-url.co.uk",
-            "visibility" : "private"
+            "baseUrl" : "https://valid-base-url5.co.uk",
+            "visibility" : "Inherit"
         }
     ],
     "releases" : [
         {
-            "isCurrent" : false,
+           "isCurrent" : false,
+           "name": "1.0",
+           "tag": "Deprecated",
+           "notes": "Current release of this api. (Deprecated)" 
+        },
+        {
+            "isCurrent" : true,
             "name": "1.0",
-            "tag": "Deprecated",
-            "availableFrom": "2024-10-01",
-            "notes": "Current release of this api. (Deprecated)" 
+            "tag": "Live",
+            "availableFrom": "2024-11-08",
+            "notes": "Current release of this api." 
          },
          {
-             "isCurrent" : true,
-             "name": "1.0",
-             "tag": "Live",
-             "availableFrom": "2024-10-24",
-             "notes": "Current release of this api." 
-          }
+            "isCurrent" : false,
+            "name": "1.0",
+            "tag": "Planned",
+            "availableFrom": "2024-11-08",
+            "notes": "Current release of this api. (Planned)" 
+         }
     ]
 
 }
