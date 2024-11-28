@@ -13,43 +13,10 @@
     "technology": "REST, C#",
     "usage": "Government parties can use it",
     "environments": [
-        {
-            "name": "dev",
-            "baseUrl" : "https://valid-base-url2.co.uk",
-            "visibility" : "Internal"
-        },
-        {
-            "name": "staging",
-            "baseUrl" : "https://valid-base-url1.co.uk",
-            "visibility" : "Inherit"
-        },
-        {
-            "name": "live",
-            "baseUrl" : "https://valid-base-url5.co.uk",
-            "visibility" : "Inherit"
-        }
+     
     ],
     "releases" : [
-        {
-           "isCurrent" : false,
-           "name": "1.0",
-           "tag": "Deprecated",
-           "notes": "Current release of this api. (Deprecated)" 
-        },
-        {
-            "isCurrent" : true,
-            "name": "1.0",
-            "tag": "Live",
-            "availableFrom": "2024-11-08",
-            "notes": "Current release of this api." 
-         },
-         {
-            "isCurrent" : false,
-            "name": "1.0",
-            "tag": "Planned",
-            "availableFrom": "2024-11-08",
-            "notes": "Current release of this api. (Planned)" 
-         }
+     
     ]
 
 }
