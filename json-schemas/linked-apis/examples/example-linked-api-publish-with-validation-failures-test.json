@@ -1,0 +1,18 @@
+{
+    "displayName": "Linked API example publish validation failures test",
+    "description": "This is an example of a invalid schema of a linked API that will be set to auto publish",
+    "overview": "",
+    "schemaUrl": "",
+    "schemaType": "",
+    "backendType": "http",
+    "majorVersion": "v1",
+    "visibility": "",
+    "tags": "test;publish;validation;",
+    "classification": "",
+    "serviceLevel": "24/7",
+    "technology": "REST, C#",
+    "usage": "Government parties can use it",
+    "environments": [],
+    "releases" : []
+
+}
