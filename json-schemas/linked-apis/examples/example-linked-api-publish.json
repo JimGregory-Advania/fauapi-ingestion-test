@@ -13,8 +13,22 @@
     "technology": "REST, C#",
     "usage": "Government parties can use it",
     "environments": [
-     
-    ],
+      {
+          "name": "dev",
+          "baseUrl" : "https://valid-base-url.co.uk",
+          "visibility" : "Inherit"
+      },
+      {
+          "name": "staging",
+          "baseUrl" : "https://valid-base-url.co.uk",
+          "visibility" : "Inherit"
+      },
+      {
+          "name": "live",
+          "baseUrl" : "https://valid-base-url.co.uk",
+          "visibility" : "Private"
+      }
+   ],
     "releases" : [
         {
            "isCurrent" : false,
