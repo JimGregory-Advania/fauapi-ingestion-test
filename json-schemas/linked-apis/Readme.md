@@ -1,10 +1,10 @@
 1. **Draft Linked API** \
     [Example](/json-schemas/linked-apis/examples/example-linked-api-draft.json)
-    -  `autoPublish` - Set this value to `false`. 
+    -  `Publish mode` - Set this value to `Manual` in the portal. 
     -  `displayName` - This value must be between 3 and 100 characters.
     -  `description` - This value must not exceed 40 characters.
     -  `backendType` - There are three available options - `http` (rest) ,`soap`, and `graphql`. If a different option is given, the specification will fail on validation.
-    -  `majorVersion` - This value must not exceed the 50 character limit, e.g. 'v1.0'.
+    -  `majorVersion` - This value must not exceed the 50 character limit, e.g. 'v1'.
     -  `environments` - They are not required for this scenario, therefore the object is left empty.
 
 2. **Draft Linked Api + Metadata and Environments** \
@@ -22,7 +22,7 @@
 3. **Auto Publish Linked API** \
  [Example](/json-schemas/linked-apis/examples/example-linked-api-publish.json) \
     All the properties from section 1 and 2 are required here as well.
-   - `autoPublish` - for this scenario the is set to `true`. This will require more properties to be added to validate the specification.
+   - `Publish mode` - Set this value to `Automatic` in the portal. . This will require more properties to be added to validate the specification.
    - `schemaURL` - A valid url of where the schema of the api is located.
    - `schemaType` - The type of the schema. Valid values are `openapi`,`wsdl`,`swagger`.
    - `releases` - At least one release is required. `isCurrent` flag must be set to `true`, otherwise the specification will not validate. The tag must
