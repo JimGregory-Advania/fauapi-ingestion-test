@@ -112,6 +112,9 @@
 							"Public",
 							"Internal"
 						]
+					},
+					"enabled": {
+						"type": "boolean"
 					}
 				}
 			},
