@@ -16,7 +16,8 @@
       {
           "name": "dev",
           "baseUrl" : "https://valid-base-url.co.uk",
-          "visibility" : "Inherit"
+          "visibility" : "Inherit",
+          "enabled":false
       },
       {
           "name": "staging",
@@ -26,7 +27,8 @@
       {
           "name": "live",
           "baseUrl" : "https://valid-base-url.co.uk",
-          "visibility" : "Private"
+          "visibility" : "Private",
+          "enabled" : true
       }
    ],
     "releases" : [
