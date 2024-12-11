@@ -1,0 +1,17 @@
+{
+    "backendType": "http",
+    "classification": "Across government services",
+    "description": "This is an example api.The description must be at least 40 characters.",
+    "displayName": "API example name",
+    "isHosted": true,
+    "majorVersion": "1",
+    "name": "api-example-name",
+    "overview": "This is an example overview. You need this in order to publish.",
+    "serviceLevel": null,
+    "siteUrl": null,
+    "tags": null,
+    "technology": null,
+    "usage": null,
+    "versionScheme": "None",
+    "visibility": "Internal"
+  }
