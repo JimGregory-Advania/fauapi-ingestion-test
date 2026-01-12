@@ -1,0 +1,207 @@
+{
+    "alerts": [
+        {
+            "isEnabled": true,
+            "metric": "PercentOfTotal",
+            "name": "Successful requests under 90%",
+            "operator": "LessThan",
+            "severity": 1,
+            "threshold": 90.0,
+            "timeWindow": 10,
+            "type": "200-299"
+        }
+    ],
+    "authentication": [
+        {
+            "autoEnforce": true,
+            "enabled": true,
+            "parameters": {
+                "headerName": "subscription-key1",
+                "queryName": "subscription-key2",
+                "notreal": "subscription-key3"
+            },
+            "type": "SubscriptionKey"
+        }
+    ],
+    "backendType": "http",
+    "classification": "Public facing",
+    "customFields": [
+        {
+            "enabled": true,
+            "hint": "This is a hint",
+            "immutable": true,
+            "name": "Test 'Text' field",
+            "order": 2,
+            "required": true,
+            "type": "Text"
+        },
+        {
+            "enabled": true,
+            "hint": "This is a hint",
+            "immutable": false,
+            "name": "Test 'boolean' field",
+            "order": 3,
+            "required": true,
+            "type": "Boolean"
+        },
+        {
+            "enabled": true,
+            "hint": "Test dropdown",
+            "immutable": false,
+            "metadata": {
+                "placeHolderText": "You must enter something here",
+                "sourceHeaders": {
+                    "x-functions-key": "AwgfS4OT3kILa7ammMM-aCO-BQRS3nzkc04nrQt6E1u2AzFua8nDtw=="
+                },
+                "sourceNameParameter": "name",
+                "sourceUrl": "https://s197d01-fauapi-demo-fnc.azurewebsites.net/api/CustomFieldDropdown",
+                "sourceValueParameter": "Value",
+                "type": "Api"
+            },
+            "name": "Test API dropdown",
+            "order": 1,
+            "required": true,
+            "type": "DropDown"
+        }
+    ],
+    "description": "An API to demonstrate using Find and Use an API to make simple requests. The API contains two GET operations which both return a simple JSON response when a call is successfuly made. One of the operations is protected by OAuth.",
+    "displayName": "Import test API",
+    "documents": [
+        {
+            "contentType": "text/plain",
+            "description": "Test text document",
+            "documentContentValue": "VGhpcyBpcyBzb21lIGNvbnRlbnQ=",
+            "fileName": "test-document.txt",
+            "name": "test-document.txt"
+        },
+        {
+            "contentType": "application/json",
+            "description": "Test JSON document",
+            "documentContentValue": "ewogICJzd2FnZ2VyIjogIjIuMCIsCiAgImluZm8iOiB7CiAgICAidGl0bGUiOiAiT3BlbkFQSSBEb2N1bWVudCBvbiBBenVyZSBGdW5jdGlvbnMiLAogICAgImRlc2NyaXB0aW9uIjogIlRoaXMgaXMgdGhlIE9wZW5BUEkgRG9jdW1lbnQgb24gQXp1cmUgRnVuY3Rpb25zIiwKICAgICJ2ZXJzaW9uIjogIjEuMC4wIgogIH0sCiAgImhvc3QiOiAiczE5N2QwMS1mYXVhcGktZGVtby1mbmMuYXp1cmV3ZWJzaXRlcy5uZXQiLAogICJiYXNlUGF0aCI6ICIvYXBpIiwKICAic2NoZW1lcyI6IFsKICAgICJodHRwcyIKICBdLAogICJwYXRocyI6IHsKICAgICIvRG93bmxvYWQve2ZpbGVuYW1lfSI6IHsKICAgICAgImdldCI6IHsKICAgICAgICAiZGVzY3JpcHRpb24iOiAiRG93bmxvYWRzIGEgZmlsZSBzcGVjaWZpZWQgYnkgdGhlIGZpbGUgbmFtZSIsCiAgICAgICAgIm9wZXJhdGlvbklkIjogIkRvd25sb2FkIiwKICAgICAgICAicHJvZHVjZXMiOiBbCiAgICAgICAgICAidGV4dC9wbGFpbiIKICAgICAgICBdLAogICAgICAgICJwYXJhbWV0ZXJzIjogWwogICAgICAgICAgewogICAgICAgICAgICAiaW4iOiAicGF0aCIsCiAgICAgICAgICAgICJuYW1lIjogImZpbGVuYW1lIiwKICAgICAgICAgICAgImRlc2NyaXB0aW9uIjogIlBsZWFzZSBzdXBwbHkgdGhlIGZpbGVuYW1lIGZvciBkb3dubG9hZCIsCiAgICAgICAgICAgICJyZXF1aXJlZCI6IHRydWUsCiAgICAgICAgICAgICJ0eXBlIjogInN0cmluZyIKICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJyZXNwb25zZXMiOiB7CiAgICAgICAgICAiMjAwIjogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iOiAiVGhlIE9LIHJlc3BvbnNlIiwKICAgICAgICAgICAgInNjaGVtYSI6IHsKICAgICAgICAgICAgICAidHlwZSI6ICJzdHJpbmciCiAgICAgICAgICAgIH0KICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJzZWN1cml0eSI6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgImZ1bmN0aW9uX2tleSI6IFtdCiAgICAgICAgICB9CiAgICAgICAgXQogICAgICB9CiAgICB9LAogICAgIi9MaXN0IjogewogICAgICAiZ2V0IjogewogICAgICAgICJkZXNjcmlwdGlvbiI6ICJMaXN0cyBhbGwgZmlsZXMgd2hpY2ggaGF2ZSBiZWVuIHVwbG9hZGVkIiwKICAgICAgICAib3BlcmF0aW9uSWQiOiAiTGlzdCIsCiAgICAgICAgInByb2R1Y2VzIjogWwogICAgICAgICAgInRleHQvcGxhaW4iCiAgICAgICAgXSwKICAgICAgICAicmVzcG9uc2VzIjogewogICAgICAgICAgIjIwMCI6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIjogIlRoZSBPSyByZXNwb25zZSIsCiAgICAgICAgICAgICJzY2hlbWEiOiB7CiAgICAgICAgICAgICAgInR5cGUiOiAic3RyaW5nIgogICAgICAgICAgICB9CiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAic2VjdXJpdHkiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJmdW5jdGlvbl9rZXkiOiBbXQogICAgICAgICAgfQogICAgICAgIF0KICAgICAgfQogICAgfSwKICAgICIvVXBsb2FkIjogewogICAgICAicG9zdCI6IHsKICAgICAgICAiZGVzY3JpcHRpb24iOiAiVXBsb2FkcyBhIGZpbGUiLAogICAgICAgICJvcGVyYXRpb25JZCI6ICJVcGxvYWQiLAogICAgICAgICJjb25zdW1lcyI6IFsKICAgICAgICAgICJtdWx0aXBhcnQvZm9ybS1kYXRhOyIKICAgICAgICBdLAogICAgICAgICJwcm9kdWNlcyI6IFsKICAgICAgICAgICJ0ZXh0L3BsYWluIgogICAgICAgIF0sCiAgICAgICAgInBhcmFtZXRlcnMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJpbiI6ICJib2R5IiwKICAgICAgICAgICAgIm5hbWUiOiAiYm9keSIsCiAgICAgICAgICAgICJzY2hlbWEiOiB7CiAgICAgICAgICAgICAgInR5cGUiOiAib2JqZWN0IgogICAgICAgICAgICB9CiAgICAgICAgICB9CiAgICAgICAgXSwKICAgICAgICAicmVzcG9uc2VzIjogewogICAgICAgICAgIjIwMCI6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIjogIlRoZSBPSyByZXNwb25zZSIsCiAgICAgICAgICAgICJzY2hlbWEiOiB7CiAgICAgICAgICAgICAgInR5cGUiOiAic3RyaW5nIgogICAgICAgICAgICB9CiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAic2VjdXJpdHkiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJmdW5jdGlvbl9rZXkiOiBbXQogICAgICAgICAgfQogICAgICAgIF0KICAgICAgfQogICAgfSwKICAgICIvRWNoby1HZXQiOiB7CiAgICAgICJnZXQiOiB7CiAgICAgICAgImRlc2NyaXB0aW9uIjogIlNpbXBsZSBHRVQgZW5kcG9pbnQgd2hpY2ggZWNob3MgYWxsIHRoZSByZXF1ZXN0ZWQgZGF0YSBpbnRvIEpTT04gZm9ybWF0IiwKICAgICAgICAib3BlcmF0aW9uSWQiOiAiRWNoby1HZXQiLAogICAgICAgICJwcm9kdWNlcyI6IFsKICAgICAgICAgICJ0ZXh0L3BsYWluIgogICAgICAgIF0sCiAgICAgICAgInJlc3BvbnNlcyI6IHsKICAgICAgICAgICIyMDAiOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiI6ICJUaGUgT0sgcmVzcG9uc2UiLAogICAgICAgICAgICAic2NoZW1hIjogewogICAgICAgICAgICAgICJ0eXBlIjogInN0cmluZyIKICAgICAgICAgICAgfQogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgInNlY3VyaXR5IjogWwogICAgICAgICAgewogICAgICAgICAgICAiZnVuY3Rpb25fa2V5IjogW10KICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0KICAgIH0sCiAgICAiL0VjaG8tUG9zdCI6IHsKICAgICAgInBvc3QiOiB7CiAgICAgICAgImRlc2NyaXB0aW9uIjogIlNpbXBsZSBQT1NUIGVuZHBvaW50IHdoaWNoIGVjaG9zIGFsbCB0aGUgcmVxdWVzdGVkIGRhdGEgaW50byBKU09OIGZvcm1hdCBpbmNsdWRpbmcgYSBwbGFpbiB0ZXh0IGJvZHkiLAogICAgICAgICJvcGVyYXRpb25JZCI6ICJFY2hvLVBvc3QiLAogICAgICAgICJwcm9kdWNlcyI6IFsKICAgICAgICAgICJ0ZXh0L3BsYWluIgogICAgICAgIF0sCiAgICAgICAgInJlc3BvbnNlcyI6IHsKICAgICAgICAgICIyMDAiOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiI6ICJUaGUgT0sgcmVzcG9uc2UiLAogICAgICAgICAgICAic2NoZW1hIjogewogICAgICAgICAgICAgICJ0eXBlIjogInN0cmluZyIKICAgICAgICAgICAgfQogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgInNlY3VyaXR5IjogWwogICAgICAgICAgewogICAgICAgICAgICAiZnVuY3Rpb25fa2V5IjogW10KICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0KICAgIH0KICB9LAogICJzZWN1cml0eURlZmluaXRpb25zIjogewogICAgImZ1bmN0aW9uX2tleSI6IHsKICAgICAgInR5cGUiOiAiYXBpS2V5IiwKICAgICAgIm5hbWUiOiAieC1mdW5jdGlvbnMta2V5IiwKICAgICAgImluIjogImhlYWRlciIKICAgIH0KICB9Cn0=",
+            "fileName": "test-document.json",
+            "name": "test-document.json"
+        }
+    ],
+    "environments": [
+        {
+            "backendMode": "Single",
+            "backends": [
+                {
+                    "enabled": true,
+                    "name": "fauapi-demo-backend",
+                    "priority": 100,
+                    "weight": 100
+                }
+            ],
+            "canSubscribe": true,
+            "enabled": true,
+            "name": "dev",
+            "requiresApproval": false,
+            "visibility": "Public"
+        },
+        {
+            "backendMode": "None",
+            "canSubscribe": true,
+            "enabled": false,
+            "name": "staging",
+            "requiresApproval": false,
+            "visibility": "Inherit"
+        },
+        {
+            "backendMode": "Explicit",
+            "backendUrl": "https://s197d01-fauapi-demo-fnc.azurewebsites.net/api",
+            "canSubscribe": true,
+            "enabled": false,
+            "name": "live",
+            "requiresApproval": true,
+            "visibility": "Inherit"
+        }
+    ],
+    "isHosted": true,
+    "majorVersion": "1",
+    "name": "import-test",
+    "overview": "This API can be used or demo purposes or to test connectivity to APIs hosted in Find and Use and API. This API has two GET operations that both return a simple JSON response. One of the operations is protected by OAuth and a Bearer token must be provided when making calls to it.",
+    "releases": [
+        {
+            "availableFrom": "2024-02-01",
+            "availableTo": "2025-02-01",
+            "isCurrent": false,
+            "name": "Version 1",
+            "notes": "Old notes",
+            "tag": "Deprecated"
+        },
+        {
+            "availableFrom": "2025-02-01",
+            "isCurrent": true,
+            "name": "Version 2",
+            "notes": "These are notes and stuff *why*",
+            "tag": "Live"
+        }
+    ],
+    "securityConfigs": [
+        {
+            "detectionMode": false,
+            "environment": "",
+            "httpsTimeout": 60,
+            "httpsTimeoutOverride": false,
+            "inheritance": false,
+            "wafExclusions": [
+                {
+                    "operator": "Equals",
+                    "rules": [
+                        "942390"
+                    ],
+                    "selector": "phoneNumber",
+                    "variable": "RequestArgNames"
+                },
+                {
+                    "operator": "Equals",
+                    "rules": [
+                        "942210"
+                    ],
+                    "selector": "emailAddress",
+                    "variable": "RequestArgNames"
+                }
+            ],
+            "wafManagedRules": []
+        },
+        {
+            "detectionMode": false,
+            "environment": "dev",
+            "httpsTimeout": 60,
+            "httpsTimeoutOverride": false,
+            "inheritance": true,
+            "wafExclusions": [],
+            "wafManagedRules": [
+                {
+                    "ruleAction": "Log",
+                    "ruleCode": 800100
+                }
+            ]
+        }
+    ],
+    "serviceLevel": "This is an example service and has no SLA",
+    "usage": "Anyone who signs in to the Find and Use an API service using a GOV.UK One Login account.",
+    "versionScheme": "None",
+    "visibility": "Internal",
+    "webhooks": [
+        {
+            "authHeaderName": "x-functions-key",
+            "authHeaderValue": "k72fPOHD6ie2qRK_U3sjltbQWCVZYiocVVOYIqUDKG8lAzFuHeIH6g==",
+            "eventType": "subscription-create",
+            "url": "https://s197d01-fauapi-demo-fnc.azurewebsites.net/api/Webhook-Post"
+        },
+        {
+            "authHeaderName": "x-functions-key",
+            "authHeaderValue": "k72fPOHD6ie2qRK_U3sjltbQWCVZYiocVVOYIqUDKG8lAzFuHeIH6g==",
+            "eventType": "subscription-update",
+            "url": "https://s197d01-fauapi-demo-fnc.azurewebsites.net/api/Webhook-Post"
+        },
+        {
+            "authHeaderName": "x-functions-key",
+            "authHeaderValue": "k72fPOHD6ie2qRK_U3sjltbQWCVZYiocVVOYIqUDKG8lAzFuHeIH6g==",
+            "eventType": "subscription-delete",
+            "url": "https://s197d01-fauapi-demo-fnc.azurewebsites.net/api/Webhook-Post"
+        }
+    ]
+}
