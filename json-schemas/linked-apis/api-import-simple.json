@@ -1,0 +1,70 @@
+{
+    "authentication": [
+        {
+            "autoEnforce": true,
+            "enabled": true,
+            "parameters": {
+                "headerName": "subscription-key",
+                "queryName": "Ocp-Apim-Subscription-Key"
+            },
+            "type": "SubscriptionKey"
+        }
+    ],
+    "backendType": "http",
+    "classification": "Public facing",
+    "description": "An API to demonstrate using Find and Use an API to make simple requests. The API contains two GET operations which both return a simple JSON response when a call is successfuly made. One of the operations is protected by OAuth.",
+    "displayName": "Import test API",
+    "documents": [
+        {
+            "contentType": "text/plain",
+            "description": "Test text document",
+            "documentContentValue": "VGhpcyBpcyBzb21lIGNvbnRlbnQ=",
+            "fileName": "test-document.txt",
+            "name": "test-document.txt"
+        }
+    ],
+    "environments": [
+        {
+            "backendMode": "None",
+            "canSubscribe": false,
+            "enabled": false,
+            "name": "dev",
+            "requiresApproval": false,
+            "visibility": "Inherit"
+        },
+        {
+            "backendMode": "None",
+            "canSubscribe": false,
+            "enabled": false,
+            "name": "staging",
+            "requiresApproval": false,
+            "visibility": "Inherit"
+        },
+        {
+            "backendMode": "Explicit",
+            "backendUrl": "https://s197d01-fauapi-demo-fnc.azurewebsites.net/api",
+            "canSubscribe": true,
+            "enabled": true,
+            "name": "live",
+            "requiresApproval": false,
+            "visibility": "Inherit"
+        }
+    ],
+    "isHosted": true,
+    "majorVersion": "1",
+    "name": "import-test",
+    "overview": "This API can be used or demo purposes or to test connectivity to APIs hosted in Find and Use and API.",
+    "releases": [
+        {
+            "availableFrom": "2026-01-01",
+            "isCurrent": true,
+            "name": "v1",
+            "notes": "These are notes and stuff *with markdown*",
+            "tag": "Live"
+        }
+    ],
+    "serviceLevel": "This is an example service and has no SLA",
+    "usage": "Anyone who signs in to the Find and Use an API service using a GOV.UK One Login account.",
+    "versionScheme": "None",
+    "visibility": "Internal"
+}
