@@ -119,7 +119,7 @@
     ],
     "isHosted": true,
     "majorVersion": "1",
-    "name": "import-test",
+    "name": "import-test-2",
     "overview": "This API can be used or demo purposes or to test connectivity to APIs hosted in Find and Use and API. This API has two GET operations that both return a simple JSON response. One of the operations is protected by OAuth and a Bearer token must be provided when making calls to it.",
     "releases": [
         {
