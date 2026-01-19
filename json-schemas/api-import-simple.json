@@ -4,9 +4,8 @@
             "autoEnforce": true,
             "enabled": true,
             "parameters": {
-                "headerName": "subscription-key1",
-                "queryName": "subscription-key2",
-                "notreal": "subscription-key3"
+                "headerName": "subscription-key",
+                "queryName": "Ocp-Apim-Subscription-Key"
             },
             "type": "SubscriptionKey"
         }
@@ -45,22 +44,22 @@
             "backendMode": "Explicit",
             "backendUrl": "https://s197d01-fauapi-demo-fnc.azurewebsites.net/api",
             "canSubscribe": true,
-            "enabled": false,
+            "enabled": true,
             "name": "live",
-            "requiresApproval": true,
+            "requiresApproval": false,
             "visibility": "Inherit"
         }
     ],
     "isHosted": true,
     "majorVersion": "1",
     "name": "import-test",
-    "overview": "This API can be used or demo purposes or to test connectivity to APIs hosted in Find and Use and API. This API has two GET operations that both return a simple JSON response. One of the operations is protected by OAuth and a Bearer token must be provided when making calls to it.",
+    "overview": "This API can be used or demo purposes or to test connectivity to APIs hosted in Find and Use and API.",
     "releases": [
         {
-            "availableFrom": "2025-02-01",
+            "availableFrom": "2026-01-01",
             "isCurrent": true,
-            "name": "Version 2",
-            "notes": "These are notes and stuff *why*",
+            "name": "v1",
+            "notes": "These are notes and stuff *with markdown*",
             "tag": "Live"
         }
     ],
